@@ -112,24 +112,24 @@ export const PROJECTS = [
   {
     title: 'Atalo Gym',
     description:
-      'Modern responsive website for a fitness facility with a focus on performance, usability, SEO optimization, and Google reviews integration.',
-    tags: ['React', 'JavaScript', 'Google Places API', 'SEO', 'Vercel'],
+      'Built a high-performance website that drives new memberships and establishes a strong online presence — with integrated Google reviews, SEO optimization, and a mobile-first experience.',
+    tags: ['React', 'Google Places API', 'SEO'],
     href: 'https://atalogym.com',
     logo: 'atalo',
   },
   {
     title: 'Sydney Forks Self Storage',
     description:
-      'Custom website built for a self storage company to improve online visibility and generate customer inquiries, with Google reviews and SEO optimization.',
-    tags: ['React', 'JavaScript', 'Google Places API', 'SEO', 'Vercel'],
+      'Designed and developed a custom site that increased online visibility and customer inquiries for a growing storage business — featuring Google reviews integration and local SEO.',
+    tags: ['React', 'Google Places API', 'SEO'],
     href: 'https://sydneyforksstorage.ca',
     logo: 'sydneyforks',
   },
   {
     title: "Lui Zappitelli's Portfolio",
     description:
-      'Personal portfolio showcasing React applications and modern UI development projects.',
-    tags: ['React', 'JavaScript', 'HTML', 'CSS', 'Vercel'],
+      'A developer portfolio built to demonstrate real-world React projects, modern UI patterns, and clean component architecture.',
+    tags: ['React', 'JavaScript', 'Vercel'],
     href: 'https://luizappitelli.vercel.app/',
     logo: null,
   },

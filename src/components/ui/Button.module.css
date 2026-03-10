@@ -33,8 +33,9 @@
 }
 
 .secondary:hover {
-  border-color: var(--color-border-hover);
-  background-color: var(--color-bg-subtle);
+  border-color: var(--color-accent-border);
+  background-color: var(--color-accent-subtle);
+  box-shadow: var(--shadow-accent-glow);
 }
 
 .ghost {

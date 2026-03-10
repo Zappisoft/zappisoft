@@ -4,9 +4,20 @@
   gap: var(--space-6);
 }
 
+.cardLink {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardLink .projectCard {
+  width: 100%;
+}
+
 .projectCard {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .header {
@@ -23,7 +34,7 @@
 }
 
 .logo {
-  height: 32px;
+  height: 38px;
   width: auto;
   object-fit: contain;
 }
@@ -77,11 +88,11 @@
   transition: transform var(--transition-fast);
 }
 
-.link:hover {
+.cardLink:hover .link {
   color: var(--color-accent);
 }
 
-.link:hover svg {
+.cardLink:hover .link svg {
   transform: translate(2px, -2px);
 }
 
