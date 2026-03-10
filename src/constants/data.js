@@ -1,12 +1,14 @@
 import {
   Code,
   Globe,
+  LayoutGrid,
   Layers,
   MessageSquare,
   Paintbrush,
   Rocket,
   Server,
   Smartphone,
+  Sparkles,
 } from 'lucide-react';
 
 export const NAV_LINKS = [
@@ -21,36 +23,43 @@ export const SERVICES = [
     icon: Globe,
     title: 'Custom Websites',
     description:
-      'High-performance marketing sites and landing pages built with modern frameworks. Fast, responsive, and designed to convert.',
-    tags: ['React', 'Next.js', 'Performance', 'SEO'],
+      'Fast, responsive websites that rank well and convert visitors into customers — built from scratch with modern frameworks.',
+    tags: ['React', 'Performance', 'SEO'],
   },
   {
     icon: Layers,
     title: 'Web Applications',
     description:
-      'Complex web apps with real-time features, dashboards, and user-facing platforms engineered for scale.',
-    tags: ['SaaS', 'Dashboards', 'Real-time', 'APIs'],
+      'Scalable web apps with dashboards, real-time data, and user-facing platforms that grow with your business.',
+    tags: ['SaaS', 'Dashboards', 'APIs'],
   },
   {
     icon: Smartphone,
     title: 'Mobile App Development',
     description:
-      'Cross-platform mobile applications built with React Native — native performance with a shared codebase for iOS and Android.',
-    tags: ['React Native', 'iOS', 'Android', 'Cross-platform'],
+      'Reach users on both iOS and Android with a single codebase — delivering native performance without doubling your budget.',
+    tags: ['React Native', 'iOS', 'Android'],
   },
   {
     icon: Server,
     title: 'Backend & Integrations',
     description:
-      'Server-side architecture, database design, API development, and third-party integrations — built to handle real-world scale and connect your tools.',
-    tags: ['Node.js', 'PostgreSQL', 'Prisma', 'REST APIs', 'Auth'],
+      'Reliable server infrastructure, database architecture, and API integrations that keep your product running and your tools connected.',
+    tags: ['Node.js', 'PostgreSQL', 'REST APIs'],
   },
   {
-    icon: Paintbrush,
-    title: 'Front-End Development',
+    icon: LayoutGrid,
+    title: 'UI Engineering',
     description:
-      'Pixel-perfect UI implementation, component libraries, and design system development with clean, maintainable code.',
-    tags: ['UI/UX', 'Components', 'Design Systems', 'Responsive'],
+      'Polished, pixel-perfect interfaces and reusable design systems that look great on every device and are easy to maintain.',
+    tags: ['UI/UX', 'Design Systems', 'Responsive'],
+  },
+  {
+    icon: Sparkles,
+    title: 'AI & Automation',
+    description:
+      'Integrate AI-powered features into your product — from chatbots to workflow automation.',
+    tags: ['AI', 'Automation', 'APIs'],
   },
 ];
 

@@ -11,7 +11,7 @@ export default function Services() {
       <Container>
         <SectionHeader
           label="What we build"
-          title="Development services tailored to your needs."
+          title="Software designed to perform."
         />
         <div className={styles.grid}>
           {SERVICES.map(({ icon: Icon, title, description, tags }) => (
