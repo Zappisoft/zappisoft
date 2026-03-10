@@ -1,10 +1,13 @@
 import { TECH_STACK } from '../constants/data';
+import useScrollReveal from '../hooks/useScrollReveal';
 import Section from '../components/ui/Section';
 import Container from '../components/ui/Container';
 import SectionHeader from '../components/ui/SectionHeader';
 import styles from './TechStack.module.css';
 
 export default function TechStack() {
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.15 });
+
   return (
     <Section id="technology">
       <Container>
@@ -12,9 +15,16 @@ export default function TechStack() {
           label="Our toolkit"
           title="Modern technologies. Proven results."
         />
-        <div className={styles.grid}>
-          {TECH_STACK.map(({ name, category }) => (
-            <div key={name} className={styles.badge}>
+        <div
+          ref={ref}
+          className={`${styles.grid} ${isVisible ? styles.revealed : ''}`}
+        >
+          {TECH_STACK.map(({ name, category }, index) => (
+            <div
+              key={name}
+              className={styles.badge}
+              style={{ transitionDelay: isVisible ? `${index * 50}ms` : '0ms' }}
+            >
               <span className={styles.name}>{name}</span>
               <span className={styles.category}>{category}</span>
             </div>

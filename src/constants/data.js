@@ -43,7 +43,7 @@ export const SERVICES = [
     title: 'Backend & Integrations',
     description:
       'Server-side architecture, database design, API development, and third-party integrations — built to handle real-world scale and connect your tools.',
-    tags: ['Node.js', 'PostgreSQL', 'REST APIs', 'Auth'],
+    tags: ['Node.js', 'PostgreSQL', 'Prisma', 'REST APIs', 'Auth'],
   },
   {
     icon: Paintbrush,
@@ -138,18 +138,27 @@ export const PROJECTS = [
 export const TECH_STACK = [
   { name: 'React', category: 'Frontend' },
   { name: 'Next.js', category: 'Frontend' },
-  { name: 'TypeScript', category: 'Language' },
   { name: 'JavaScript', category: 'Language' },
+  { name: 'TypeScript', category: 'Language' },
   { name: 'Node.js', category: 'Backend' },
   { name: 'Tailwind CSS', category: 'Styling' },
   { name: 'PostgreSQL', category: 'Database' },
   { name: 'MongoDB', category: 'Database' },
+  { name: 'Prisma', category: 'Backend' },
   { name: 'REST APIs', category: 'Integration' },
   { name: 'Git', category: 'Tooling' },
   { name: 'Vite', category: 'Tooling' },
   { name: 'Vercel', category: 'Deployment' },
   { name: 'AWS', category: 'Infrastructure' },
   { name: 'Docker', category: 'Infrastructure' },
+  { name: 'React Native', category: 'Mobile' },
+  { name: 'Expo', category: 'Mobile' },
+  { name: 'Express.js', category: 'Backend' },
+  { name: 'Framer Motion', category: 'Frontend' },
+  { name: 'Stripe', category: 'Integration' },
+  { name: 'Google APIs', category: 'Integration' },
+  { name: 'OpenAI', category: 'Integration' },
+  { name: 'JWT', category: 'Authentication' },
   { name: 'Figma', category: 'Design' },
 ];
 
