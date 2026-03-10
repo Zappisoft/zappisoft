@@ -1,0 +1,21 @@
+.section {
+  padding: var(--section-padding) 0;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.elevated {
+  background-color: var(--color-bg-elevated);
+}
+
+.subtle {
+  background-color: var(--color-bg-subtle);
+}

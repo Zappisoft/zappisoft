@@ -1,0 +1,129 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-navbar);
+  padding: var(--space-4) 0;
+  transition: all var(--transition-base);
+}
+
+.scrolled {
+  background-color: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-3) 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  flex-shrink: 0;
+  flex: 1;
+}
+
+.logoIcon {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.wordmark {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.link {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-text-primary);
+}
+
+.cta {
+  flex: 1;
+  text-align: right;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.cta:hover {
+  color: var(--color-text-primary);
+}
+
+.toggle {
+  display: none;
+  color: var(--color-text-primary);
+}
+
+/* Mobile drawer */
+.drawer {
+  position: fixed;
+  inset: 0;
+  top: 60px;
+  z-index: var(--z-overlay);
+  background-color: var(--color-bg);
+  padding: var(--space-8) var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.drawerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.drawerLink {
+  display: block;
+  padding: var(--space-4) 0;
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+  transition: color var(--transition-fast);
+}
+
+.drawerLink:hover {
+  color: var(--color-text-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .links,
+  .cta {
+    display: none;
+  }
+
+  .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
