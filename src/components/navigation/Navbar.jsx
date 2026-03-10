@@ -23,7 +23,9 @@ export default function Navbar() {
   const closeMobile = () => setIsMobileOpen(false);
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+    <header
+      className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${isMobileOpen ? styles.menuOpen : ''}`}
+    >
       <nav className={styles.nav} aria-label="Main navigation">
         <a href="#" className={styles.logo} aria-label="Zappisoft — back to top">
           <img src={logoIcon} alt="" className={styles.logoIcon} />
@@ -41,7 +43,7 @@ export default function Navbar() {
         <a href="#contact" className={styles.cta}>Get in touch</a>
 
         <button
-          className={styles.toggle}
+          className={`${styles.toggle} ${isMobileOpen ? styles.toggleOpen : ''}`}
           onClick={() => setIsMobileOpen((prev) => !prev)}
           aria-expanded={isMobileOpen}
           aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}

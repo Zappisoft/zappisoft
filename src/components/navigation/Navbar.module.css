@@ -5,7 +5,10 @@
   right: 0;
   z-index: var(--z-navbar);
   padding: var(--space-4) 0;
-  transition: all var(--transition-base);
+  transition: background-color var(--transition-base),
+              backdrop-filter var(--transition-base),
+              padding var(--transition-base),
+              border-color var(--transition-base);
 }
 
 .scrolled {
@@ -76,18 +79,21 @@
   color: var(--color-text-primary);
 }
 
+/* Toggle button (hamburger / close) */
 .toggle {
   display: none;
   color: var(--color-text-primary);
+  transition: transform 0.3s ease;
 }
 
-/* Mobile drawer */
+.toggleOpen {
+  transform: rotate(180deg);
+}
+
+/* Mobile drawer - flows naturally below nav inside header */
 .drawer {
-  position: fixed;
-  inset: 0;
-  top: 60px;
-  z-index: var(--z-overlay);
-  background-color: var(--color-bg);
+  flex: 1;
+  overflow-y: auto;
   padding: var(--space-8) var(--container-padding);
   display: flex;
   flex-direction: column;
@@ -116,9 +122,27 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .header {
+    background-color: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .menuOpen {
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
   .links,
   .cta {
     display: none;
+  }
+
+  .logo {
+    flex: initial;
   }
 
   .toggle {
