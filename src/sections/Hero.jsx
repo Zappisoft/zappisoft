@@ -38,8 +38,8 @@ export default function Hero() {
               Start a project
               <ArrowRight size={16} />
             </Button>
-            <Button href="#services" variant="secondary" size="lg">
-              See our services
+            <Button href="#work" variant="secondary" size="lg">
+              See our work
             </Button>
           </div>
 

@@ -23,7 +23,7 @@
 .primary:hover {
   background-color: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
-  box-shadow: var(--shadow-accent-glow);
+  box-shadow: 0 0 50px rgba(45, 212, 191, 0.25);
 }
 
 .secondary {
