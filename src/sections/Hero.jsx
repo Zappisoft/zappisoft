@@ -22,7 +22,7 @@ export default function Hero() {
           <span className={styles.label}>Full-stack development studio</span>
 
           <h1 className={styles.headline}>
-            Custom software engineered
+            Custom software engineered{' '}
             <br />
             to move businesses{' '}
             <span className={styles.accent}>forward.</span>
