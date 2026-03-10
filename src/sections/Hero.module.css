@@ -43,6 +43,8 @@
   border-radius: 50%;
   pointer-events: none;
   filter: blur(60px);
+  opacity: 0;
+  animation: heroGlowIn 0.8s ease-out 0.1s forwards;
 }
 
 .content {
@@ -53,6 +55,26 @@
   margin: 0 auto;
 }
 
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroGlowIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .label {
   display: inline-block;
   font-family: var(--font-mono);
@@ -61,6 +83,8 @@
   color: var(--color-text-secondary);
   letter-spacing: 0.08em;
   margin-bottom: var(--space-6);
+  opacity: 0;
+  animation: heroReveal 0.4s ease-out 0s forwards;
 }
 
 .headline {
@@ -70,6 +94,8 @@
   letter-spacing: -0.035em;
   color: var(--color-text-primary);
   margin-bottom: var(--space-8);
+  opacity: 0;
+  animation: heroReveal 0.4s ease-out 0.08s forwards;
 }
 
 .accent {
@@ -82,6 +108,8 @@
   line-height: var(--leading-normal);
   max-width: 500px;
   margin: 0 auto var(--space-10);
+  opacity: 0;
+  animation: heroReveal 0.4s ease-out 0.16s forwards;
 }
 
 .actions {
@@ -91,6 +119,8 @@
   gap: var(--space-4);
   flex-wrap: wrap;
   margin-bottom: var(--space-16);
+  opacity: 0;
+  animation: heroReveal 0.4s ease-out 0.24s forwards;
 }
 
 .techLine {
@@ -103,12 +133,30 @@
   font-size: var(--text-xs);
   color: var(--color-text-tertiary);
   letter-spacing: 0.01em;
+  opacity: 0;
+  animation: heroReveal 0.4s ease-out 0.32s forwards;
 }
 
 .separator {
   display: inline-block;
   margin: 0 var(--space-2);
   opacity: 0.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .label,
+  .headline,
+  .subheadline,
+  .actions,
+  .techLine {
+    opacity: 1;
+    animation: none;
+  }
+
+  .glow {
+    opacity: 1;
+    animation: none;
+  }
 }
 
 @media (max-width: 768px) {
