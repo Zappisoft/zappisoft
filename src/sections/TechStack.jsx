@@ -23,7 +23,7 @@ export default function TechStack() {
             <div
               key={name}
               className={styles.badge}
-              style={{ transitionDelay: isVisible ? `${index * 50}ms` : '0ms' }}
+              style={{ animationDelay: isVisible ? `${index * 50}ms` : '0ms' }}
             >
               <span className={styles.name}>{name}</span>
               <span className={styles.category}>{category}</span>
