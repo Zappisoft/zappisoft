@@ -54,6 +54,22 @@ export default function CTA() {
 
           {status === 'success' ? (
             <div className={styles.successState}>
+              <svg
+                className={styles.checkmark}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  pathLength="1"
+                  d="M5 12l5 5L20 7"
+                  className={styles.checkPath}
+                />
+              </svg>
               <p className={styles.feedbackSuccess}>
                 Thanks for reaching out. We&apos;ll get back to you shortly.
               </p>

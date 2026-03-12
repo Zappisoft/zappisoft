@@ -93,6 +93,36 @@
 .successState {
   text-align: center;
   padding: var(--space-12) var(--space-6);
+  animation: successFadeIn 0.35s ease-out;
+}
+
+@keyframes successFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.checkmark {
+  width: 48px;
+  height: 48px;
+  color: var(--color-accent);
+  margin: 0 auto var(--space-6);
+  display: block;
+}
+
+.checkPath {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: checkDraw 0.4s ease-out 0.15s forwards;
+}
+
+@keyframes checkDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .feedbackSuccess {
