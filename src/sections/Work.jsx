@@ -21,7 +21,7 @@ export default function Work() {
       <Container>
         <SectionHeader
           label="Selected work"
-          title="Real products we've engineered."
+          title="Real products we've shipped."
         />
         <div className={styles.grid}>
           {PROJECTS.map(({ title, description, tags, href, screenshot }) => {

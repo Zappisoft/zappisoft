@@ -18,6 +18,8 @@ export const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ];
 
+export const INSTAGRAM_URL = 'https://www.instagram.com/zappisoft.inc/';
+
 export const SERVICES = [
   {
     icon: Globe,

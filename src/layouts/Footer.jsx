@@ -1,4 +1,5 @@
-import { NAV_LINKS } from '../constants/data';
+import { Instagram } from 'lucide-react';
+import { NAV_LINKS, INSTAGRAM_URL } from '../constants/data';
 import Container from '../components/ui/Container';
 import logoIcon from '../assets/logo-icon.png';
 import styles from './Footer.module.css';
@@ -19,6 +20,15 @@ export default function Footer() {
             {NAV_LINKS.map(({ label, href }) => (
               <a key={href} href={href} className={styles.link}>{label}</a>
             ))}
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="Zappisoft on Instagram"
+            >
+              <Instagram size={18} />
+            </a>
           </nav>
 
           <p className={styles.copyright}>

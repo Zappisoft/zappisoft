@@ -27,6 +27,11 @@
   font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
   color: var(--color-text-primary);
+  transition: color var(--transition-fast);
+}
+
+.logo:hover .wordmark {
+  color: var(--color-accent);
 }
 
 .links {
@@ -43,6 +48,17 @@
 
 .link:hover {
   color: var(--color-text-secondary);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-tertiary);
+  transition: color var(--transition-fast);
+}
+
+.socialLink:hover {
+  color: var(--color-accent);
 }
 
 .copyright {
