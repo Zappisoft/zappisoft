@@ -48,7 +48,7 @@ export default function Navbar() {
           aria-expanded={isMobileOpen}
           aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
         >
-          {isMobileOpen ? <X size={22} /> : <Menu size={22} />}
+          {isMobileOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </nav>
 
