@@ -30,7 +30,7 @@ export const SERVICES = [
     icon: Layers,
     title: 'Web Applications',
     description:
-      'Scalable web apps with dashboards, real-time data, and user-facing platforms that grow with your business.',
+      'Custom web apps with dashboards, real-time data, and scalable platforms tailored to your business.',
     tags: ['SaaS', 'Dashboards', 'APIs'],
   },
   {

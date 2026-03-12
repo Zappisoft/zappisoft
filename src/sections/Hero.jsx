@@ -29,8 +29,8 @@ export default function Hero() {
           </h1>
 
           <p className={styles.subheadline}>
-            Custom websites, web apps, and mobile apps — scalable digital
-            platforms built with precision by a developer-led studio.
+            Custom websites, web apps, and mobile apps — built with precision
+            by a developer-led studio.
           </p>
 
           <div className={styles.actions}>
