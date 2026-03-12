@@ -4,13 +4,15 @@ import Section from '../components/ui/Section';
 import Container from '../components/ui/Container';
 import SectionHeader from '../components/ui/SectionHeader';
 import Card from '../components/ui/Card';
-import logoAtalo from '../assets/logo-atalo.svg';
-import logoSydneyforks from '../assets/logo-sydneyforks.png';
+import ataloScreenshot from '../assets/atalo-screenshot.png';
+import sydneyScreenshot from '../assets/sydney-screenshot.png';
+import portfolioScreenshot from '../assets/portfolio-screenshot.png';
 import styles from './Work.module.css';
 
-const LOGOS = {
-  atalo: logoAtalo,
-  sydneyforks: logoSydneyforks,
+const SCREENSHOTS = {
+  atalo: ataloScreenshot,
+  sydney: sydneyScreenshot,
+  portfolio: portfolioScreenshot,
 };
 
 export default function Work() {
@@ -22,23 +24,24 @@ export default function Work() {
           title="Real products we've engineered."
         />
         <div className={styles.grid}>
-          {PROJECTS.map(({ title, description, tags, href, logo }) => {
+          {PROJECTS.map(({ title, description, tags, href, screenshot }) => {
             const content = (
               <>
-                <div className={styles.header}>
-                  <div className={styles.logoWrapper}>
-                    {logo ? (
-                      <img
-                        src={LOGOS[logo]}
-                        alt={`${title} logo`}
-                        className={styles.logo}
-                      />
-                    ) : (
-                      <Code size={24} strokeWidth={1.5} className={styles.placeholderIcon} />
-                    )}
+                {screenshot ? (
+                  <div className={styles.screenshotWrapper}>
+                    <img
+                      src={SCREENSHOTS[screenshot]}
+                      alt={`${title} screenshot`}
+                      className={styles.screenshot}
+                    />
                   </div>
-                  <h3 className={styles.cardTitle}>{title}</h3>
-                </div>
+                ) : (
+                  <div className={styles.header}>
+                    <Code size={24} strokeWidth={1.5} className={styles.placeholderIcon} />
+                    <h3 className={styles.cardTitle}>{title}</h3>
+                  </div>
+                )}
+                {screenshot && <h3 className={styles.cardTitle}>{title}</h3>}
                 <p className={styles.cardDescription}>{description}</p>
 
                 <div className={styles.tags}>

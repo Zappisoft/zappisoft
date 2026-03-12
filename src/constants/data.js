@@ -125,6 +125,7 @@ export const PROJECTS = [
     tags: ['React', 'Google Places API', 'SEO'],
     href: 'https://atalogym.com',
     logo: 'atalo',
+    screenshot: 'atalo',
   },
   {
     title: 'Sydney Forks Self Storage',
@@ -133,6 +134,7 @@ export const PROJECTS = [
     tags: ['React', 'Google Places API', 'SEO'],
     href: 'https://sydneyforksstorage.ca',
     logo: 'sydneyforks',
+    screenshot: 'sydney',
   },
   {
     title: "Lui Zappitelli's Portfolio",
@@ -141,6 +143,7 @@ export const PROJECTS = [
     tags: ['React', 'JavaScript', 'Vercel'],
     href: 'https://luizappitelli.vercel.app/',
     logo: null,
+    screenshot: 'portfolio',
   },
 ];
 
