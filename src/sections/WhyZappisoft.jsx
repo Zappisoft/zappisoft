@@ -2,6 +2,7 @@ import { DIFFERENTIATORS } from '../constants/data';
 import Section from '../components/ui/Section';
 import Container from '../components/ui/Container';
 import SectionHeader from '../components/ui/SectionHeader';
+import RevealGrid from '../components/ui/RevealGrid';
 import styles from './WhyZappisoft.module.css';
 
 export default function WhyZappisoft() {
@@ -12,7 +13,7 @@ export default function WhyZappisoft() {
           label="Why Zappisoft"
           title="Built different. On purpose."
         />
-        <div className={styles.grid}>
+        <RevealGrid staggerDelay={300} className={styles.grid}>
           {DIFFERENTIATORS.map(({ icon: Icon, title, description }) => (
             <div key={title} className={styles.item}>
               <div className={styles.iconWrapper}>
@@ -24,7 +25,7 @@ export default function WhyZappisoft() {
               </div>
             </div>
           ))}
-        </div>
+        </RevealGrid>
       </Container>
     </Section>
   );

@@ -2,6 +2,7 @@ import { PROCESS_STEPS } from '../constants/data';
 import Section from '../components/ui/Section';
 import Container from '../components/ui/Container';
 import SectionHeader from '../components/ui/SectionHeader';
+import RevealGrid from '../components/ui/RevealGrid';
 import styles from './Process.module.css';
 
 export default function Process() {
@@ -12,7 +13,7 @@ export default function Process() {
           label="How we work"
           title="From concept to launch in four phases."
         />
-        <div className={styles.steps}>
+        <RevealGrid staggerDelay={300} className={styles.steps}>
           {PROCESS_STEPS.map(({ number, title, description }) => (
             <div key={number} className={styles.step}>
               <span className={styles.number}>{number}</span>
@@ -22,7 +23,7 @@ export default function Process() {
               </div>
             </div>
           ))}
-        </div>
+        </RevealGrid>
       </Container>
     </Section>
   );

@@ -3,13 +3,23 @@ import styles from './RevealCard.module.css';
 
 const REVEAL_OPTIONS = { threshold: 0.15, rootMargin: '0px 0px -15% 0px' };
 
-export default function RevealCard({ children, className = '' }) {
-  const { ref, isVisible } = useScrollReveal(REVEAL_OPTIONS);
+export default function RevealCard({ children, className = '', controlled, isVisible, animateFromParent, style }) {
+  const { ref, isVisible: observedVisible } = useScrollReveal(REVEAL_OPTIONS);
+  const visible = controlled ? isVisible : observedVisible;
+
+  if (animateFromParent) {
+    return (
+      <div className={className} style={style}>
+        {children}
+      </div>
+    );
+  }
 
   return (
     <div
-      ref={ref}
-      className={`${styles.revealCard} ${isVisible ? styles.visible : ''} ${className}`}
+      ref={controlled ? undefined : ref}
+      className={`${styles.revealCard} ${visible ? styles.visible : ''} ${className}`}
+      style={style}
     >
       {children}
     </div>

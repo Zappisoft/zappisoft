@@ -1,0 +1,27 @@
+@keyframes staggerReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.revealGrid > * {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.revealGrid.revealed > * {
+  animation: staggerReveal 0.4s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .revealGrid > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
