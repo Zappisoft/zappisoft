@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <Container>
         <div className={styles.row}>
-          <a href="#" className={styles.logo} aria-label="Zappisoft — back to top">
+          <a href="#top" className={styles.logo} aria-label="Zappisoft — back to top">
             <img src={logoIcon} alt="" className={styles.logoIcon} />
             <span className={styles.wordmark}>Zappisoft</span>
           </a>

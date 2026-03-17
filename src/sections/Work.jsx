@@ -7,9 +7,9 @@ import Card from '../components/ui/Card';
 import RevealCard from '../components/ui/RevealCard';
 import RevealGrid from '../components/ui/RevealGrid';
 import useMediaQuery from '../hooks/useMediaQuery';
-import ataloScreenshot from '../assets/atalo-screenshot.png';
-import sydneyScreenshot from '../assets/sydney-screenshot.png';
-import portfolioScreenshot from '../assets/portfolio-screenshot.png';
+import ataloScreenshot from '../assets/atalo-screenshot.jpg';
+import sydneyScreenshot from '../assets/sydney-screenshot.jpg';
+import portfolioScreenshot from '../assets/portfolio-screenshot.jpg';
 import styles from './Work.module.css';
 
 const SCREENSHOTS = {
@@ -30,6 +30,7 @@ export default function Work() {
               src={SCREENSHOTS[screenshot]}
               alt={`${title} screenshot`}
               className={styles.screenshot}
+              loading="lazy"
             />
           </div>
         ) : (

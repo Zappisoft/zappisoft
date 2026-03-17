@@ -52,6 +52,7 @@ export default function CTA() {
             {CONTACT_EMAIL}
           </a>
 
+          <div aria-live="polite">
           {status === 'success' ? (
             <div className={styles.successState}>
               <svg
@@ -150,6 +151,7 @@ export default function CTA() {
               </Button>
             </form>
           )}
+          </div>
         </div>
       </Container>
     </Section>
