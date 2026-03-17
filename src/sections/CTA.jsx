@@ -10,16 +10,39 @@ const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_ID
   ? `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ID}`
   : null;
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function validateForm({ name, email, message }) {
+  if (!name || name.trim().length < 2) return 'Please enter your name.';
+  if (!email || !EMAIL_RE.test(email)) return 'Please enter a valid email address.';
+  if (!message || message.trim().length < 10) return 'Please enter a message (at least 10 characters).';
+  return null;
+}
+
 export default function CTA() {
   const [status, setStatus] = useState(''); // '' | 'sending' | 'success' | 'error'
+  const [validationError, setValidationError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!FORMSPREE_URL) return;
 
-    setStatus('sending');
     const form = e.target;
     const formData = new FormData(form);
+
+    const error = validateForm({
+      name: formData.get('name'),
+      email: formData.get('_replyto'),
+      message: formData.get('message'),
+    });
+
+    if (error) {
+      setValidationError(error);
+      return;
+    }
+
+    setValidationError('');
+    setStatus('sending');
 
     try {
       const response = await fetch(FORMSPREE_URL, {
@@ -81,6 +104,7 @@ export default function CTA() {
               onSubmit={handleSubmit}
               action={FORMSPREE_URL || '#'}
               method="POST"
+              noValidate
             >
               <input
                 type="hidden"
@@ -96,9 +120,11 @@ export default function CTA() {
                   type="text"
                   name="name"
                   required
+                  minLength={2}
                   className={styles.input}
                   placeholder="Your name"
                   disabled={status === 'sending'}
+                  onChange={() => validationError && setValidationError('')}
                 />
               </div>
               <div className={styles.field}>
@@ -113,6 +139,7 @@ export default function CTA() {
                   className={styles.input}
                   placeholder="you@company.com"
                   disabled={status === 'sending'}
+                  onChange={() => validationError && setValidationError('')}
                 />
               </div>
               <div className={styles.field}>
@@ -123,16 +150,18 @@ export default function CTA() {
                   id="contact-message"
                   name="message"
                   required
+                  minLength={10}
                   rows={4}
                   className={styles.textarea}
                   placeholder="Tell us about your project..."
                   disabled={status === 'sending'}
+                  onChange={() => validationError && setValidationError('')}
                 />
               </div>
 
-              {status === 'error' && (
+              {(validationError || status === 'error') && (
                 <p className={styles.feedbackError}>
-                  Something went wrong. Please try emailing us directly.
+                  {validationError || 'Something went wrong. Please try emailing us directly.'}
                 </p>
               )}
 

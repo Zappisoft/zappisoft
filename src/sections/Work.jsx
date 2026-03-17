@@ -7,15 +7,18 @@ import Card from '../components/ui/Card';
 import RevealCard from '../components/ui/RevealCard';
 import RevealGrid from '../components/ui/RevealGrid';
 import useMediaQuery from '../hooks/useMediaQuery';
-import ataloScreenshot from '../assets/atalo-screenshot.jpg';
-import sydneyScreenshot from '../assets/sydney-screenshot.jpg';
-import portfolioScreenshot from '../assets/portfolio-screenshot.jpg';
+import ataloJpg from '../assets/atalo-screenshot.jpg';
+import ataloWebp from '../assets/atalo-screenshot.webp';
+import sydneyJpg from '../assets/sydney-screenshot.jpg';
+import sydneyWebp from '../assets/sydney-screenshot.webp';
+import portfolioJpg from '../assets/portfolio-screenshot.jpg';
+import portfolioWebp from '../assets/portfolio-screenshot.webp';
 import styles from './Work.module.css';
 
 const SCREENSHOTS = {
-  atalo: ataloScreenshot,
-  sydney: sydneyScreenshot,
-  portfolio: portfolioScreenshot,
+  atalo: { jpg: ataloJpg, webp: ataloWebp },
+  sydney: { jpg: sydneyJpg, webp: sydneyWebp },
+  portfolio: { jpg: portfolioJpg, webp: portfolioWebp },
 };
 
 export default function Work() {
@@ -26,12 +29,15 @@ export default function Work() {
       <>
         {screenshot ? (
           <div className={styles.screenshotWrapper}>
-            <img
-              src={SCREENSHOTS[screenshot]}
-              alt={`${title} screenshot`}
-              className={styles.screenshot}
-              loading="lazy"
-            />
+            <picture>
+              <source srcSet={SCREENSHOTS[screenshot].webp} type="image/webp" />
+              <img
+                src={SCREENSHOTS[screenshot].jpg}
+                alt={`${title} screenshot`}
+                className={styles.screenshot}
+                loading="lazy"
+              />
+            </picture>
           </div>
         ) : (
           <div className={styles.header}>
