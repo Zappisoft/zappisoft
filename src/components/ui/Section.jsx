@@ -12,18 +12,19 @@ export default function Section({
   id,
   background = 'default',
   className = '',
+  disableSectionReveal = false,
 }) {
   const { ref, isVisible } = useScrollReveal();
 
   const classes = [
     styles.section,
     BACKGROUNDS[background],
-    isVisible ? styles.visible : '',
+    disableSectionReveal ? styles.visible : (isVisible ? styles.visible : ''),
     className,
   ].filter(Boolean).join(' ');
 
   return (
-    <section id={id} ref={ref} className={classes}>
+    <section id={id} ref={disableSectionReveal ? undefined : ref} className={classes}>
       {children}
     </section>
   );
