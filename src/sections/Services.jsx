@@ -8,7 +8,7 @@ import styles from './Services.module.css';
 
 export default function Services() {
   return (
-    <Section id="services" background="tier2" disableSectionReveal className={styles.servicesSection}>
+    <Section id="services" background="tier2" disableSectionReveal>
       <Container>
         <SectionHeader
           label="What we build"
