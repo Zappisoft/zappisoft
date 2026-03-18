@@ -23,8 +23,16 @@ export default function Home() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zappisoft.com" />
+        <meta property="og:image" content="https://zappisoft.com/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image" content="https://zappisoft.com/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://zappisoft.com/og-image.png" />
         <meta name="twitter:title" content="Zappisoft — Software Built with Precision" />
+        <meta name="twitter:image" content="https://zappisoft.com/og-image.png" />
         <meta
           name="twitter:description"
           content="Developer-led studio building custom websites, web applications, and scalable digital solutions."

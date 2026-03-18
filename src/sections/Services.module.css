@@ -1,3 +1,7 @@
+.servicesSection {
+  padding-top: 60px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

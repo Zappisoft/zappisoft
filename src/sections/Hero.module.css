@@ -3,9 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: min(100vh, 930px);
   padding-top: var(--space-32);
-  padding-bottom: var(--section-padding);
+  padding-bottom: 60px;
   overflow: hidden;
 }
 

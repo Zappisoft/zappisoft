@@ -1,7 +1,7 @@
 import useScrollReveal from '../../hooks/useScrollReveal';
 import styles from './RevealCard.module.css';
 
-const REVEAL_OPTIONS = { threshold: 0.15, rootMargin: '0px 0px -15% 0px' };
+const REVEAL_OPTIONS = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
 
 export default function RevealCard({ children, className = '', controlled, isVisible, animateFromParent, style }) {
   const { ref, isVisible: observedVisible } = useScrollReveal(REVEAL_OPTIONS);
