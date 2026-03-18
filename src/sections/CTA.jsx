@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
+import RevealCard from '../components/ui/RevealCard';
 import styles from './CTA.module.css';
 
 const CONTACT_EMAIL = 'contact@zappisoft.com';
@@ -99,6 +100,7 @@ export default function CTA() {
               </p>
             </div>
           ) : (
+            <RevealCard>
             <form
               className={styles.form}
               onSubmit={handleSubmit}
@@ -179,6 +181,7 @@ export default function CTA() {
                 )}
               </Button>
             </form>
+            </RevealCard>
           )}
           </div>
         </div>
