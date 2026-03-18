@@ -17,7 +17,7 @@ export default function Hero() {
       <div className={styles.grid} aria-hidden="true" />
       <div className={styles.glow} aria-hidden="true" />
 
-      <Container>
+      <Container className={styles.heroContainer}>
         <div className={styles.content}>
           <span className={styles.label}>Full-stack development studio</span>
 
