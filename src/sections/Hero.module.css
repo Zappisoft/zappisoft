@@ -190,10 +190,6 @@
     margin-bottom: 0;
   }
 
-  .headline {
-    margin-top: calc(-1 * var(--space-4));
-  }
-
   .headline br {
     display: none;
   }
