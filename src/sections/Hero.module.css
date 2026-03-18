@@ -144,6 +144,34 @@
   opacity: 0.4;
 }
 
+@media (min-width: 769px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .heroContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    width: 100%;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+  .techLine {
+    margin-top: var(--space-14);
+    padding-top: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .label,
   .headline,
@@ -160,13 +188,14 @@
   }
 }
 
+/* Tablet and below (768px) — base mobile/tablet layout */
 @media (max-width: 768px) {
   .hero {
     min-height: 100dvh;
-    padding-top: 90px;
-    padding-bottom: 48px;
+    padding-top: 80px;
+    padding-bottom: 60px;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: column;
   }
 
@@ -181,7 +210,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 0;
   }
 
@@ -197,5 +225,28 @@
   .glow {
     width: 700px;
     height: 700px;
+  }
+}
+
+/* Mobile only (480px) — space-between for vertical distribution */
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 90px;
+    padding-bottom: 48px;
+    justify-content: space-between;
+  }
+
+  .content {
+    justify-content: space-between;
+  }
+}
+
+/* Tablet only (481px–768px) — centered layout; must come after mobile to override at boundaries */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero {
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
   }
 }
