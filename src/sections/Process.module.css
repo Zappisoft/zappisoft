@@ -1,3 +1,28 @@
+.timelineWrapper {
+  position: relative;
+  padding-left: 52px;
+}
+
+.trackLine {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.07);
+  pointer-events: none;
+}
+
+.fillLine {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #00d4b4, rgba(0, 212, 180, 0.2));
+  transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
 .steps {
   display: flex;
   flex-direction: column;
@@ -5,11 +30,13 @@
 }
 
 .step {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: var(--space-8);
   padding: var(--space-8) 0;
   border-bottom: 1px solid var(--color-border);
+  cursor: default;
 }
 
 .step:first-child {
@@ -21,6 +48,40 @@
   padding-bottom: 0;
 }
 
+.dot {
+  position: absolute;
+  left: -42px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #111;
+  border: 2px solid rgba(0, 212, 180, 0.3);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.dotActive {
+  background: #00d4b4;
+  border-color: #00d4b4;
+  box-shadow: 0 0 0 4px rgba(0, 212, 180, 0.2), 0 0 16px rgba(0, 212, 180, 0.5);
+  transform: scale(1.2);
+}
+
+@keyframes numberPulse {
+  0% {
+    transform: scale(1.15);
+    text-shadow: 0 0 12px rgba(0, 212, 180, 0.8), 0 0 24px rgba(0, 212, 180, 0.4);
+  }
+  40% {
+    transform: scale(1.4);
+    text-shadow: 0 0 20px rgba(0, 212, 180, 1), 0 0 40px rgba(0, 212, 180, 0.6);
+  }
+  100% {
+    transform: scale(1.15);
+    text-shadow: 0 0 12px rgba(0, 212, 180, 0.8), 0 0 24px rgba(0, 212, 180, 0.4);
+  }
+}
+
 .number {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
@@ -28,6 +89,17 @@
   color: var(--color-accent);
   flex-shrink: 0;
   padding-top: var(--space-1);
+  transition: all 0.3s ease;
+}
+
+.numberActive {
+  color: #00d4b4;
+  text-shadow: 0 0 12px rgba(0, 212, 180, 0.8), 0 0 24px rgba(0, 212, 180, 0.4);
+  transform: scale(1.15);
+}
+
+.numberClicked {
+  animation: numberPulse 0.4s ease-out forwards;
 }
 
 .body {
@@ -49,6 +121,12 @@
 }
 
 @media (max-width: 640px) {
+  .dot {
+    width: 10px;
+    height: 10px;
+    left: -40px;
+  }
+
   .step {
     gap: var(--space-5);
   }

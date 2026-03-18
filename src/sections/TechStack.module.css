@@ -15,6 +15,20 @@
   transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
 }
 
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-base), filter var(--transition-base);
+}
+
+.badge:hover .icon {
+  color: var(--color-accent);
+  filter: drop-shadow(0 0 8px rgba(45, 212, 191, 0.5));
+}
+
 .badge:hover {
   border-color: var(--color-accent-border);
   transform: translateY(-2px);
