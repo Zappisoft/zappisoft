@@ -32,7 +32,7 @@ export default function WhyZappisoft() {
   }, []);
 
   return (
-    <Section id="about">
+    <Section id="about" background="tier2">
       <Container>
         <SectionHeader
           label="Why Zappisoft"

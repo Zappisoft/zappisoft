@@ -59,7 +59,7 @@ const TECH_ICONS = {
 
 export default function TechStack() {
   return (
-    <Section id="technology">
+    <Section id="technology" background="tier2">
       <Container>
         <SectionHeader
           label="Our toolkit"

@@ -64,7 +64,7 @@ export default function CTA() {
   };
 
   return (
-    <Section id="contact" background="elevated">
+    <Section id="contact" background="tier3">
       <Container>
         <div className={styles.content}>
           <h2 className={styles.headline}>Let&apos;s build something that performs.</h2>

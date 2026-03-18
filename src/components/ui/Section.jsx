@@ -3,6 +3,8 @@ import styles from './Section.module.css';
 
 const BACKGROUNDS = {
   default: '',
+  tier2: styles.tier2,
+  tier3: styles.elevated,
   elevated: styles.elevated,
   subtle: styles.subtle,
 };

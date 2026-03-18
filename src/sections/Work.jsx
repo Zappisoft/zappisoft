@@ -82,7 +82,7 @@ export default function Work() {
   };
 
   return (
-    <Section id="work" background="elevated" disableSectionReveal>
+    <Section id="work" background="tier3" disableSectionReveal>
       <Container>
         <SectionHeader
           label="Selected work"

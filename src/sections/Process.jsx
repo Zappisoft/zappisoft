@@ -81,7 +81,7 @@ export default function Process() {
   }, [activeStep]);
 
   return (
-    <Section id="process" background="elevated">
+    <Section id="process" background="tier3">
       <Container>
         <SectionHeader
           label="How we work"
