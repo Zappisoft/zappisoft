@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: center;
   min-height: min(100vh, 1000px);
-  padding-top: var(--space-32);
-  padding-bottom: 60px;
+  padding-top: 80px;
+  padding-bottom: 20px;
   overflow: hidden;
 }
 
@@ -163,7 +163,7 @@
 @media (max-width: 768px) {
   .hero {
     min-height: 100dvh;
-    padding-top: var(--space-24);
+    padding-top: 80px;
   }
 
   .headline br {
