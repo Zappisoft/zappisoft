@@ -172,6 +172,7 @@ export const TECH_STACK = [
   { name: 'Stripe', category: 'Integration' },
   { name: 'Google APIs', category: 'Integration' },
   { name: 'OpenAI', category: 'Integration' },
+  { name: 'Anthropic', category: 'Integration' },
   { name: 'JWT', category: 'Authentication' },
   { name: 'Figma', category: 'Design' },
 ];
