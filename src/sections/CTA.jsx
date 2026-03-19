@@ -64,9 +64,18 @@ export default function CTA() {
   };
 
   return (
-    <Section id="contact" background="tier3">
+    <Section id="contact" background="tier3" className={styles.contactSection}>
       <Container>
         <div className={styles.content}>
+          <picture className={styles.neonSignPicture}>
+            <source media="(min-width: 769px)" srcSet="/neon-sign-desktop.png" />
+            <img
+              src="/neon-sign-mobile.png"
+              alt=""
+              aria-hidden="true"
+              className={styles.neonSign}
+            />
+          </picture>
           <h2 className={styles.headline}>Let&apos;s build something that performs.</h2>
           <p className={styles.description}>
             Share a few details about your project and we&apos;ll follow up within 24 hours.
