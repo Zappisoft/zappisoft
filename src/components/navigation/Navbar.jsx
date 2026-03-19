@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '../../constants/data';
 import Button from '../ui/Button';
-import logoIcon from '../../assets/logo-icon.png';
+import LogoMark from '../ui/LogoMark';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -65,7 +65,7 @@ export default function Navbar() {
     >
       <nav className={styles.nav} aria-label="Main navigation">
         <a href="#top" className={styles.logo} aria-label="Zappisoft — back to top">
-          <img src={logoIcon} alt="" className={styles.logoIcon} />
+          <LogoMark className={styles.logoMark} />
           <span className={styles.wordmark}>Zappisoft</span>
         </a>
 

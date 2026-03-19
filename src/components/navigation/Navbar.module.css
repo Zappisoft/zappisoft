@@ -38,10 +38,9 @@
   flex: 1;
 }
 
-.logoIcon {
+.logoMark {
   height: 36px;
-  width: auto;
-  object-fit: contain;
+  width: 36px;
 }
 
 .wordmark {

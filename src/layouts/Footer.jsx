@@ -1,7 +1,7 @@
 import { Instagram } from 'lucide-react';
 import { NAV_LINKS, INSTAGRAM_URL } from '../constants/data';
 import Container from '../components/ui/Container';
-import logoIcon from '../assets/logo-icon.png';
+import LogoMark from '../components/ui/LogoMark';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -12,7 +12,7 @@ export default function Footer() {
       <Container>
         <div className={styles.row}>
           <a href="#top" className={styles.logo} aria-label="Zappisoft — back to top">
-            <img src={logoIcon} alt="" className={styles.logoIcon} />
+            <LogoMark className={styles.logoMark} />
             <span className={styles.wordmark}>Zappisoft</span>
           </a>
 

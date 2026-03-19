@@ -17,10 +17,9 @@
   flex-shrink: 0;
 }
 
-.logoIcon {
+.logoMark {
   height: 22px;
-  width: auto;
-  object-fit: contain;
+  width: 22px;
 }
 
 .wordmark {
