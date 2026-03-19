@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Container from '../components/ui/Container';
@@ -23,6 +23,38 @@ function validateForm({ name, email, message }) {
 export default function CTA() {
   const [status, setStatus] = useState(''); // '' | 'sending' | 'success' | 'error'
   const [validationError, setValidationError] = useState('');
+  const neonRef = useRef(null);
+
+  useEffect(() => {
+    const neonEl = neonRef.current;
+    if (!neonEl) return;
+
+    const handleEnd = () => {
+      neonEl.classList.remove(styles.powerOn);
+      neonEl.classList.add(styles.alive);
+      neonEl.removeEventListener('animationend', handleEnd);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            neonEl.classList.add(styles.powerOn);
+            neonEl.addEventListener('animationend', handleEnd);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    observer.observe(neonEl.closest('section') || neonEl);
+
+    return () => {
+      observer.disconnect();
+      neonEl.removeEventListener('animationend', handleEnd);
+    };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -70,6 +102,7 @@ export default function CTA() {
           <picture className={styles.neonSignPicture}>
             <source media="(min-width: 769px)" srcSet="/neon-sign-desktop.png" />
             <img
+              ref={neonRef}
               src="/neon-sign-mobile.png"
               alt=""
               aria-hidden="true"
