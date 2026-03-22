@@ -2,10 +2,20 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
+  align-items: stretch;
+}
+
+/* Stretch each cell so all cards in a row match the tallest (e.g. portfolio vs longer copy) */
+.grid > * {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .cardLink {
   display: flex;
+  flex: 1;
+  min-height: 0;
   text-decoration: none;
   color: inherit;
 }
@@ -17,6 +27,9 @@
 .projectCard {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
   cursor: pointer;
 }
 
