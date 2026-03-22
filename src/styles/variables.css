@@ -85,6 +85,9 @@
   --transition-base: 300ms ease;
   --transition-slow: 500ms ease;
 
+  /* Fixed navbar — keep anchor targets (#contact, etc.) visible below the bar */
+  --scroll-padding-top: calc(var(--space-6) * 2 + 2.25rem);
+
   /* Z-index */
   --z-navbar: 100;
   --z-overlay: 200;
