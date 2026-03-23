@@ -168,6 +168,8 @@ export default function CTA() {
                   className={styles.input}
                   placeholder="Your name"
                   disabled={status === 'sending'}
+                  aria-invalid={!!validationError}
+                  aria-describedby={validationError ? 'form-error' : undefined}
                   onChange={() => validationError && setValidationError('')}
                 />
               </div>
@@ -183,6 +185,8 @@ export default function CTA() {
                   className={styles.input}
                   placeholder="you@company.com"
                   disabled={status === 'sending'}
+                  aria-invalid={!!validationError}
+                  aria-describedby={validationError ? 'form-error' : undefined}
                   onChange={() => validationError && setValidationError('')}
                 />
               </div>
@@ -199,12 +203,14 @@ export default function CTA() {
                   className={styles.textarea}
                   placeholder="Tell us about your project..."
                   disabled={status === 'sending'}
+                  aria-invalid={!!validationError}
+                  aria-describedby={validationError ? 'form-error' : undefined}
                   onChange={() => validationError && setValidationError('')}
                 />
               </div>
 
               {(validationError || status === 'error') && (
-                <p className={styles.feedbackError}>
+                <p id="form-error" role="alert" className={styles.feedbackError}>
                   {validationError || 'Something went wrong. Please try emailing us directly.'}
                 </p>
               )}

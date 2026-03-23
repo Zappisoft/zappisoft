@@ -88,11 +88,11 @@ export default function Process() {
           title="From concept to launch in four phases."
         />
         <div ref={timelineRef} className={styles.timelineWrapper}>
-          <div className={styles.trackLine} aria-hidden />
+          <div className={styles.trackLine} aria-hidden="true" />
           <div
             className={styles.fillLine}
             style={{ height: fillHeight }}
-            aria-hidden
+            aria-hidden="true"
           />
           <RevealGrid staggerDelay={300} className={styles.steps}>
             {PROCESS_STEPS.map(({ number, title, description }, index) => (
@@ -100,11 +100,15 @@ export default function Process() {
                 key={number}
                 ref={(el) => { stepRefs.current[index] = el; }}
                 className={styles.step}
+                role="button"
+                tabIndex={0}
                 onClick={() => handleStepClick(index)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleStepClick(index); } }}
+                onFocus={() => activateStep(index)}
               >
                 <span
                   className={`${styles.dot} ${index <= activeStep ? styles.dotActive : ''}`}
-                  aria-hidden
+                  aria-hidden="true"
                 />
                 <span
                   className={`${styles.number} ${index === activeStep ? styles.numberActive : ''} ${clickedStep === index ? styles.numberClicked : ''}`}

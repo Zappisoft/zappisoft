@@ -26,6 +26,26 @@ body {
   border: 0;
 }
 
+.sr-only:focus,
+.sr-only:focus-visible {
+  position: fixed;
+  top: var(--space-3);
+  left: var(--space-3);
+  width: auto;
+  height: auto;
+  padding: var(--space-3) var(--space-5);
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-bg);
+  background-color: var(--color-accent);
+  border-radius: var(--radius-md);
+  z-index: 9999;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

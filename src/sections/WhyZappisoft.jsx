@@ -21,11 +21,15 @@ export default function WhyZappisoft() {
       item.addEventListener('mouseleave', onLeave);
       item.addEventListener('touchstart', onEnter, { passive: true });
       item.addEventListener('touchend', onLeave);
+      item.addEventListener('focusin', onEnter);
+      item.addEventListener('focusout', onLeave);
       cleanups.push(() => {
         item.removeEventListener('mouseenter', onEnter);
         item.removeEventListener('mouseleave', onLeave);
         item.removeEventListener('touchstart', onEnter);
         item.removeEventListener('touchend', onLeave);
+        item.removeEventListener('focusin', onEnter);
+        item.removeEventListener('focusout', onLeave);
       });
     });
     return () => cleanups.forEach((fn) => fn());
@@ -44,6 +48,7 @@ export default function WhyZappisoft() {
                 key={title}
                 ref={(el) => { itemRefs.current[index] = el; }}
                 className={`${styles.item} ${hoveredIndex === index ? styles.itemHovered : ''}`}
+                tabIndex={0}
               >
                 <div className={styles.iconWrapper}>
                   <Icon size={20} strokeWidth={1.5} />
