@@ -5,6 +5,9 @@ import Button from '../ui/Button';
 import LogoMark from '../ui/LogoMark';
 import styles from './Navbar.module.css';
 
+/** Exclude #contact — same destination as the “Get in touch” CTA */
+const NAV_LINKS_MAIN = NAV_LINKS.filter(({ href }) => href !== '#contact');
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -70,7 +73,7 @@ export default function Navbar() {
         </a>
 
         <ul className={styles.links}>
-          {NAV_LINKS.map(({ label, href }) => (
+          {NAV_LINKS_MAIN.map(({ label, href }) => (
             <li key={href}>
               <a href={href} className={styles.link}>{label}</a>
             </li>
@@ -93,7 +96,7 @@ export default function Navbar() {
       {isMobileOpen && (
         <div ref={drawerRef} className={styles.drawer} role="dialog" aria-label="Mobile navigation">
           <ul className={styles.drawerLinks}>
-            {NAV_LINKS.map(({ label, href }) => (
+            {NAV_LINKS_MAIN.map(({ label, href }) => (
               <li key={href}>
                 <a href={href} className={styles.drawerLink} onClick={closeMobile}>
                   {label}

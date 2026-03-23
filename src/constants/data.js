@@ -15,7 +15,7 @@ export const NAV_LINKS = [
   { label: 'Services', href: '#services' },
   { label: 'Work', href: '#work' },
   { label: 'Process', href: '#process' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Get in touch', href: '#contact' },
 ];
 
 export const INSTAGRAM_URL = 'https://www.instagram.com/zappisoft.inc/';
