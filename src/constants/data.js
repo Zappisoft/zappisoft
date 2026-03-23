@@ -139,7 +139,7 @@ export const PROJECTS = [
     screenshot: 'sydney',
   },
   {
-    title: "Lui Zappitelli's Portfolio",
+    title: 'Personal Portfolio',
     description:
       'A developer portfolio built to demonstrate real-world React projects, modern UI patterns, and clean component architecture.',
     tags: ['React', 'JavaScript', 'Vercel'],
