@@ -56,6 +56,22 @@ export default function CTA() {
     };
   }, []);
 
+  const handleNeonClick = () => {
+    const neonEl = neonRef.current;
+    if (!neonEl || !neonEl.classList.contains(styles.alive)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    neonEl.classList.remove(styles.alive);
+    neonEl.classList.add(styles.clickFlicker);
+
+    const onEnd = () => {
+      neonEl.classList.remove(styles.clickFlicker);
+      neonEl.classList.add(styles.alive);
+      neonEl.removeEventListener('animationend', onEnd);
+    };
+    neonEl.addEventListener('animationend', onEnd);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!FORMSPREE_URL) return;
@@ -99,7 +115,7 @@ export default function CTA() {
     <Section id="contact" background="tier3" className={styles.contactSection}>
       <Container>
         <div className={styles.content}>
-          <picture className={styles.neonSignPicture}>
+          <picture className={styles.neonSignPicture} onClick={handleNeonClick}>
             <source media="(min-width: 769px)" srcSet="/neon-sign-desktop.webp" type="image/webp" />
             <source media="(min-width: 769px)" srcSet="/neon-sign-desktop.png" type="image/png" />
             <source srcSet="/neon-sign-mobile.webp" type="image/webp" />
