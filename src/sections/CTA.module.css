@@ -290,6 +290,58 @@
   }
 }
 
+/* Lighter blurs for tap feedback on real mobile GPUs */
+@keyframes neonClickFlickerMobile {
+  0% {
+    filter: drop-shadow(0 0 12px rgba(0, 212, 180, 0.6))
+            drop-shadow(0 0 24px rgba(0, 212, 180, 0.4))
+            drop-shadow(0 0 36px rgba(0, 212, 180, 0.25));
+    opacity: 1;
+  }
+  8% {
+    filter: drop-shadow(0 0 1px rgba(0, 212, 180, 0.05))
+            drop-shadow(0 0 2px rgba(0, 212, 180, 0.02))
+            drop-shadow(0 0 3px rgba(0, 212, 180, 0.01));
+    opacity: 0.08;
+  }
+  16% {
+    filter: drop-shadow(0 0 8px rgba(0, 212, 180, 0.5))
+            drop-shadow(0 0 15px rgba(0, 212, 180, 0.3))
+            drop-shadow(0 0 23px rgba(0, 212, 180, 0.15));
+    opacity: 0.7;
+  }
+  24% {
+    filter: drop-shadow(0 0 1px rgba(0, 212, 180, 0.03))
+            drop-shadow(0 0 1px rgba(0, 212, 180, 0.01))
+            drop-shadow(0 0 2px rgba(0, 212, 180, 0));
+    opacity: 0.04;
+  }
+  40% {
+    filter: drop-shadow(0 0 10px rgba(0, 212, 180, 0.55))
+            drop-shadow(0 0 19px rgba(0, 212, 180, 0.35))
+            drop-shadow(0 0 28px rgba(0, 212, 180, 0.2));
+    opacity: 0.8;
+  }
+  50% {
+    filter: drop-shadow(0 0 1px rgba(0, 212, 180, 0.06))
+            drop-shadow(0 0 2px rgba(0, 212, 180, 0.03))
+            drop-shadow(0 0 4px rgba(0, 212, 180, 0.01));
+    opacity: 0.1;
+  }
+  65% {
+    filter: drop-shadow(0 0 13px rgba(0, 212, 180, 0.6))
+            drop-shadow(0 0 25px rgba(0, 212, 180, 0.4))
+            drop-shadow(0 0 36px rgba(0, 212, 180, 0.25));
+    opacity: 0.9;
+  }
+  100% {
+    filter: drop-shadow(0 0 12px rgba(0, 212, 180, 0.6))
+            drop-shadow(0 0 24px rgba(0, 212, 180, 0.4))
+            drop-shadow(0 0 36px rgba(0, 212, 180, 0.25));
+    opacity: 1;
+  }
+}
+
 .neonSign.clickFlicker {
   animation: neonClickFlicker 0.4s ease-out forwards;
   will-change: filter;
@@ -329,6 +381,10 @@
 
   .neonSign.alive {
     animation: neonFlickerMobile 7s ease-in-out infinite;
+  }
+
+  .neonSign.clickFlicker {
+    animation: neonClickFlickerMobile 0.4s ease-out forwards;
   }
 }
 
