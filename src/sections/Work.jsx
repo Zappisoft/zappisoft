@@ -36,6 +36,9 @@ export default function Work() {
                 alt={`${title} screenshot`}
                 className={styles.screenshot}
                 loading="lazy"
+                decoding="async"
+                width={1280}
+                height={720}
               />
             </picture>
           </div>

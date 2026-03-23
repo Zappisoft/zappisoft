@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App.jsx';
 import './analytics.js';
+import './styles/fonts.css';
 import './styles/global.css';
 
 createRoot(document.getElementById('root')).render(

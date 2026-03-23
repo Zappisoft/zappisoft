@@ -125,6 +125,9 @@ export default function CTA() {
               alt=""
               aria-hidden="true"
               loading="lazy"
+              decoding="async"
+              width={559}
+              height={628}
               className={styles.neonSign}
             />
           </picture>

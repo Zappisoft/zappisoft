@@ -24,6 +24,7 @@ export default function Process() {
   };
 
   const alignDots = () => {
+    const measurements = [];
     stepRefs.current.forEach((step) => {
       if (!step) return;
       const dot = step.querySelector(`.${styles.dot}`);
@@ -31,8 +32,12 @@ export default function Process() {
       if (!dot || !num) return;
       const stepRect = step.getBoundingClientRect();
       const numRect = num.getBoundingClientRect();
+      const dotHeight = dot.offsetHeight;
       const centerY = numRect.top + numRect.height / 2 - stepRect.top;
-      dot.style.top = `${centerY - dot.offsetHeight / 2}px`;
+      measurements.push({ dot, top: centerY - dotHeight / 2 });
+    });
+    measurements.forEach(({ dot, top }) => {
+      dot.style.top = `${top}px`;
     });
   };
 
@@ -54,8 +59,6 @@ export default function Process() {
 
   useEffect(() => {
     alignDots();
-    window.addEventListener('resize', alignDots);
-    return () => window.removeEventListener('resize', alignDots);
   }, [activeStep, clickedStep]);
 
   useEffect(() => {

@@ -58,11 +58,9 @@
 
 @keyframes heroReveal {
   from {
-    opacity: 0;
     transform: translateY(12px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -84,7 +82,6 @@
   color: var(--color-text-secondary);
   letter-spacing: 0.08em;
   margin-bottom: var(--space-10);
-  opacity: 0;
   animation: heroReveal 0.4s ease-out 0s forwards;
 }
 
@@ -95,7 +92,6 @@
   letter-spacing: -0.035em;
   color: var(--color-text-primary);
   margin-bottom: var(--space-8);
-  opacity: 0;
   animation: heroReveal 0.4s ease-out 0.08s forwards;
 }
 
@@ -109,7 +105,6 @@
   line-height: var(--leading-normal);
   max-width: 500px;
   margin: 0 auto var(--space-10);
-  opacity: 0;
   animation: heroReveal 0.4s ease-out 0.16s forwards;
 }
 
@@ -120,7 +115,6 @@
   gap: var(--space-4);
   flex-wrap: wrap;
   margin-bottom: var(--space-10);
-  opacity: 0;
   animation: heroReveal 0.4s ease-out 0.24s forwards;
 }
 
@@ -134,7 +128,6 @@
   font-size: var(--text-xs);
   color: var(--color-text-tertiary);
   letter-spacing: 0.01em;
-  opacity: 0;
   animation: heroReveal 0.4s ease-out 0.32s forwards;
 }
 
@@ -178,7 +171,6 @@
   .subheadline,
   .actions,
   .techLine {
-    opacity: 1;
     animation: none;
   }
 
