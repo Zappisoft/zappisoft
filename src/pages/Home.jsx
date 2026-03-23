@@ -1,11 +1,8 @@
+import { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../sections/Hero';
-import Services from '../sections/Services';
-import Work from '../sections/Work';
-import WhyZappisoft from '../sections/WhyZappisoft';
-import Process from '../sections/Process';
-import TechStack from '../sections/TechStack';
-import CTA from '../sections/CTA';
+
+const HomeBelowFold = lazy(() => import('./HomeBelowFold.jsx'));
 
 export default function Home() {
   return (
@@ -19,12 +16,9 @@ export default function Home() {
       </Helmet>
 
       <Hero />
-      <Services />
-      <Work />
-      <WhyZappisoft />
-      <Process />
-      <TechStack />
-      <CTA />
+      <Suspense fallback={null}>
+        <HomeBelowFold />
+      </Suspense>
     </>
   );
 }
