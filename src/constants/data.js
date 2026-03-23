@@ -11,15 +11,6 @@ import {
   Sparkles,
 } from 'lucide-react';
 
-export const NAV_LINKS = [
-  { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
-  { label: 'Process', href: '#process' },
-  { label: 'Get in touch', href: '#contact' },
-];
-
-export const INSTAGRAM_URL = 'https://www.instagram.com/zappisoft.inc/';
-
 export const SERVICES = [
   {
     icon: Globe,

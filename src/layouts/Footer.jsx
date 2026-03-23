@@ -1,5 +1,5 @@
 import { Instagram } from 'lucide-react';
-import { NAV_LINKS, INSTAGRAM_URL } from '../constants/data';
+import { NAV_LINKS, INSTAGRAM_URL } from '../constants/siteNav';
 import Container from '../components/ui/Container';
 import LogoMark from '../components/ui/LogoMark';
 import styles from './Footer.module.css';
