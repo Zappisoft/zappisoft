@@ -262,6 +262,7 @@
 .neonSign.alive {
   opacity: 1;
   animation: neonFlicker 7s ease-in-out infinite;
+  will-change: filter;
 }
 
 @media (max-width: 768px) {

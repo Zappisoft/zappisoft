@@ -100,12 +100,15 @@ export default function CTA() {
       <Container>
         <div className={styles.content}>
           <picture className={styles.neonSignPicture}>
-            <source media="(min-width: 769px)" srcSet="/neon-sign-desktop.png" />
+            <source media="(min-width: 769px)" srcSet="/neon-sign-desktop.webp" type="image/webp" />
+            <source media="(min-width: 769px)" srcSet="/neon-sign-desktop.png" type="image/png" />
+            <source srcSet="/neon-sign-mobile.webp" type="image/webp" />
             <img
               ref={neonRef}
               src="/neon-sign-mobile.png"
               alt=""
               aria-hidden="true"
+              loading="lazy"
               className={styles.neonSign}
             />
           </picture>
