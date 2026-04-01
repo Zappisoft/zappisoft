@@ -11,7 +11,7 @@ export default function Services() {
     <Section id="services" background="tier2" disableSectionReveal>
       <Container>
         <SectionHeader
-          label="What we build"
+          label="What we do"
           title="Software designed to perform."
         />
         <div className={styles.grid}>
