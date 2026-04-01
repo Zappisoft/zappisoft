@@ -4,6 +4,26 @@ import '@/styles/global.css';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Zappisoft',
+  url: 'https://zappisoft.com',
+  description:
+    'Developer-led studio building custom websites, web applications, and scalable digital solutions with modern technology.',
+  email: 'contact@zappisoft.com',
+  sameAs: ['https://www.instagram.com/zappisoft.inc/'],
+  serviceType: [
+    'Custom Websites',
+    'Web Applications',
+    'UI/UX Design',
+    'Performance Optimization',
+    'SEO',
+    'Technical Consulting',
+    'Mobile App Development',
+  ],
+};
+
 export const viewport = {
   themeColor: '#0A0A0A',
 };
@@ -56,6 +76,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
         {GA_ID ? (
           <>
