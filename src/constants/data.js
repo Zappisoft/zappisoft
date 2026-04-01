@@ -1,11 +1,13 @@
 import {
   Code,
+  Gauge,
   Globe,
   LayoutGrid,
   Layers,
   MessageSquare,
   Paintbrush,
   Rocket,
+  Search,
   Server,
   Smartphone,
   Sparkles,
@@ -53,6 +55,20 @@ export const SERVICES = [
     description:
       'Integrate AI-powered features into your product — from chatbots to workflow automation.',
     tags: ['AI', 'Automation', 'APIs'],
+  },
+  {
+    icon: Search,
+    title: 'SEO & Site Audits',
+    description:
+      'Comprehensive audits that uncover what\'s holding your site back — from search rankings and metadata to infrastructure bottlenecks and Core Web Vitals.',
+    tags: ['SEO', 'Audits', 'Core Web Vitals'],
+  },
+  {
+    icon: Gauge,
+    title: 'Performance Optimization',
+    description:
+      'Speed up load times, improve Lighthouse scores, and reduce server costs — through code splitting, caching strategies, and infrastructure tuning.',
+    tags: ['Speed', 'Lighthouse', 'Infrastructure'],
   },
 ];
 
