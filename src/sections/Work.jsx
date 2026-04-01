@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowUpRight, Code } from 'lucide-react';
 import { PROJECTS } from '../constants/data';
 import Section from '../components/ui/Section';
@@ -16,9 +18,9 @@ import portfolioWebp from '../assets/portfolio-screenshot.webp';
 import styles from './Work.module.css';
 
 const SCREENSHOTS = {
-  atalo: { jpg: ataloJpg, webp: ataloWebp },
-  sydney: { jpg: sydneyJpg, webp: sydneyWebp },
-  portfolio: { jpg: portfolioJpg, webp: portfolioWebp },
+  atalo: { jpg: ataloJpg.src || ataloJpg, webp: ataloWebp.src || ataloWebp },
+  sydney: { jpg: sydneyJpg.src || sydneyJpg, webp: sydneyWebp.src || sydneyWebp },
+  portfolio: { jpg: portfolioJpg.src || portfolioJpg, webp: portfolioWebp.src || portfolioWebp },
 };
 
 export default function Work() {

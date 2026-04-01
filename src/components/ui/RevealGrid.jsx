@@ -1,3 +1,5 @@
+'use client';
+
 import { Children, cloneElement } from 'react';
 import useScrollReveal from '../../hooks/useScrollReveal';
 import styles from './RevealGrid.module.css';

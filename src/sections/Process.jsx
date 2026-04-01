@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useRef, useEffect } from 'react';
 import { PROCESS_STEPS } from '../constants/data';
 import Section from '../components/ui/Section';

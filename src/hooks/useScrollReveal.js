@@ -1,16 +1,19 @@
-import { useEffect, useRef, useState } from 'react';
+'use client';
 
-const prefersReducedMotion =
-  typeof window !== 'undefined' &&
-  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+import { useEffect, useRef, useState } from 'react';
 
 export default function useScrollReveal(options = {}) {
   const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(prefersReducedMotion);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const element = ref.current;
-    if (!element || prefersReducedMotion) return;
+    if (!element) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setIsVisible(true);
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {

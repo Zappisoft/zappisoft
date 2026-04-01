@@ -9,8 +9,8 @@ export default function LogoMark({ className = '' }) {
     <span
       className={`${styles.mark} ${className}`}
       style={{
-        WebkitMaskImage: `url(${logoIcon})`,
-        maskImage: `url(${logoIcon})`,
+        WebkitMaskImage: `url(${logoIcon.src || logoIcon})`,
+        maskImage: `url(${logoIcon.src || logoIcon})`,
       }}
       aria-hidden="true"
     />

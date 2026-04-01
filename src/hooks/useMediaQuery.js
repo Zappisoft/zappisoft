@@ -1,15 +1,13 @@
-import { useState, useEffect, useCallback } from 'react';
+'use client';
+
+import { useState, useEffect } from 'react';
 
 export default function useMediaQuery(query) {
-  const getMatches = useCallback(
-    () => typeof window !== 'undefined' && window.matchMedia(query).matches,
-    [query]
-  );
-
-  const [matches, setMatches] = useState(getMatches);
+  const [matches, setMatches] = useState(false);
 
   useEffect(() => {
     const media = window.matchMedia(query);
+    setMatches(media.matches);
     const handler = () => setMatches(media.matches);
     media.addEventListener('change', handler);
     return () => media.removeEventListener('change', handler);

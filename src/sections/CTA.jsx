@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import Section from '../components/ui/Section';
@@ -7,8 +9,8 @@ import RevealCard from '../components/ui/RevealCard';
 import styles from './CTA.module.css';
 
 const CONTACT_EMAIL = 'contact@zappisoft.com';
-const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_ID
-  ? `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ID}`
+const FORMSPREE_URL = process.env.NEXT_PUBLIC_FORMSPREE_ID
+  ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`
   : null;
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
