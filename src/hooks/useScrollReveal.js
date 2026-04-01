@@ -1,24 +1,24 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useReducer } from 'react';
 
 export default function useScrollReveal(options = {}) {
   const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, reveal] = useReducer(() => true, false);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setIsVisible(true);
+      reveal();
       return;
     }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          reveal();
           observer.unobserve(element);
         }
       },
