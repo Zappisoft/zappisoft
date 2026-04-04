@@ -13,14 +13,11 @@ import ataloJpg from '../assets/atalo-screenshot.jpg';
 import ataloWebp from '../assets/atalo-screenshot.webp';
 import sydneyJpg from '../assets/sydney-screenshot.jpg';
 import sydneyWebp from '../assets/sydney-screenshot.webp';
-import portfolioJpg from '../assets/portfolio-screenshot.jpg';
-import portfolioWebp from '../assets/portfolio-screenshot.webp';
 import styles from './Work.module.css';
 
 const SCREENSHOTS = {
   atalo: { jpg: ataloJpg.src || ataloJpg, webp: ataloWebp.src || ataloWebp },
   sydney: { jpg: sydneyJpg.src || sydneyJpg, webp: sydneyWebp.src || sydneyWebp },
-  portfolio: { jpg: portfolioJpg.src || portfolioJpg, webp: portfolioWebp.src || portfolioWebp },
 };
 
 export default function Work() {

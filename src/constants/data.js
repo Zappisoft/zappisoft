@@ -145,15 +145,6 @@ export const PROJECTS = [
     logo: 'sydneyforks',
     screenshot: 'sydney',
   },
-  {
-    title: 'Personal Portfolio',
-    description:
-      'A developer portfolio built to demonstrate real-world React projects, modern UI patterns, and clean component architecture.',
-    tags: ['React', 'JavaScript', 'Vercel'],
-    href: 'https://luizappitelli.vercel.app/',
-    logo: null,
-    screenshot: 'portfolio',
-  },
 ];
 
 export const TECH_STACK = [
