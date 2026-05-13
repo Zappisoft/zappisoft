@@ -65,7 +65,7 @@ export default function TechStack() {
       <Container>
         <SectionHeader
           label="Our toolkit"
-          title="Modern technologies. Proven results."
+          title="The tools we reach for."
         />
         <RevealGrid staggerDelay={50} className={styles.grid}>
           {TECH_STACK.map(({ name, category }) => {

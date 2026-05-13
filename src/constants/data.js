@@ -18,56 +18,56 @@ export const SERVICES = [
     icon: Globe,
     title: 'Custom Websites',
     description:
-      'Fast, responsive websites that rank well and convert visitors into customers — built from scratch with modern frameworks.',
+      'Fast, responsive websites built from scratch with modern frameworks. Designed to rank well and convert visitors into customers.',
     tags: ['React', 'Performance', 'SEO'],
   },
   {
     icon: Layers,
     title: 'Web Applications',
     description:
-      'Custom web apps with dashboards, real-time data, and scalable platforms tailored to your business.',
+      'Custom web apps with dashboards, real-time data, and platforms built around how your business actually works.',
     tags: ['SaaS', 'Dashboards', 'APIs'],
   },
   {
     icon: Smartphone,
     title: 'Mobile App Development',
     description:
-      'Reach users on both iOS and Android with a single codebase — delivering native performance without doubling your budget.',
+      'Reach users on iOS and Android with a single codebase. Native performance without doubling your budget.',
     tags: ['React Native', 'iOS', 'Android'],
   },
   {
     icon: Server,
     title: 'Backend & Integrations',
     description:
-      'Reliable server infrastructure, database architecture, and API integrations that keep your product running and your tools connected.',
+      'Server infrastructure, database architecture, and API integrations that keep your product running and your tools talking to each other.',
     tags: ['Node.js', 'PostgreSQL', 'REST APIs'],
   },
   {
     icon: LayoutGrid,
     title: 'UI Engineering',
     description:
-      'Polished, pixel-perfect interfaces and reusable design systems that look great on every device and are easy to maintain.',
+      'Clean interfaces and reusable design systems that work across every device and don\'t fall apart when you need to extend them.',
     tags: ['UI/UX', 'Design Systems', 'Responsive'],
   },
   {
     icon: Sparkles,
     title: 'AI & Automation',
     description:
-      'Integrate AI-powered features into your product — from chatbots to workflow automation.',
+      'Integrate AI features into your product, whether that\'s a chatbot, a workflow automation, or something custom.',
     tags: ['AI', 'Automation', 'APIs'],
   },
   {
     icon: Search,
     title: 'SEO & Site Audits',
     description:
-      'Comprehensive audits that uncover what\'s holding your site back — from search rankings and metadata to infrastructure bottlenecks and Core Web Vitals.',
+      'Audits that find what\'s holding your site back, whether it\'s search rankings, metadata, infrastructure bottlenecks, or Core Web Vitals.',
     tags: ['SEO', 'Audits', 'Core Web Vitals'],
   },
   {
     icon: Gauge,
     title: 'Performance Optimization',
     description:
-      'Speed up load times, improve Lighthouse scores, and reduce server costs — through code splitting, caching strategies, and infrastructure tuning.',
+      'Speed up load times, improve Lighthouse scores, and reduce server costs through code splitting, caching, and infrastructure tuning.',
     tags: ['Speed', 'Lighthouse', 'Infrastructure'],
   },
 ];
@@ -77,25 +77,25 @@ export const DIFFERENTIATORS = [
     icon: Code,
     title: 'Developer-led',
     description:
-      'Every project is led by senior developers who understand architecture, not just project managers pushing timelines.',
+      'Every project is led by senior developers who actually understand the architecture, not project managers chasing deadlines.',
   },
   {
     icon: Paintbrush,
     title: 'Custom code',
     description:
-      'No templates. No page builders. Every line of code is written specifically for your project and your requirements.',
+      'No templates. No page builders. Every line of code is written for your project, from scratch.',
   },
   {
     icon: Rocket,
     title: 'Modern stack',
     description:
-      'We use the same technologies trusted by leading tech companies — React, Node.js, and modern tooling.',
+      'React, Node.js, and the same modern tooling that big tech companies run on.',
   },
   {
     icon: MessageSquare,
     title: 'Transparent process',
     description:
-      'Clear communication, honest timelines, regular updates. You always know where your project stands.',
+      'Honest timelines and regular updates. You\'ll never have to ask where your project stands.',
   },
 ];
 
@@ -104,25 +104,25 @@ export const PROCESS_STEPS = [
     number: '01',
     title: 'Discovery',
     description:
-      'We learn about your business, your goals, and your users. We define the scope, timeline, and technical requirements together.',
+      'We learn about your business and the people who\'ll use what we build. Then we work with you to nail down the scope, timeline, and requirements.',
   },
   {
     number: '02',
     title: 'Architecture & Design',
     description:
-      'We plan the technical approach, design the interface, and build a clear roadmap before writing any production code.',
+      'We plan the technical approach and design the interface, mapping out a clear roadmap before any production code gets written.',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'We build iteratively with regular demos and feedback cycles. You see progress every week, not just at launch.',
+      'We build iteratively with regular demos and feedback. You\'ll see progress every week, not just at launch.',
   },
   {
     number: '04',
     title: 'Launch & Support',
     description:
-      'We deploy, test thoroughly, and provide post-launch support to ensure everything runs smoothly in production.',
+      'We deploy, test thoroughly, and stick around after launch to make sure everything\'s running smoothly in production.',
   },
 ];
 
@@ -130,7 +130,7 @@ export const PROJECTS = [
   {
     title: 'Atalo Gym',
     description:
-      'Built a high-performance website that drives new memberships and establishes a strong online presence — with integrated Google reviews, SEO optimization, and a mobile-first experience.',
+      'A fast, mobile-first website that\'s been bringing in new gym memberships since launch. Integrated Google reviews and built for local SEO.',
     tags: ['React', 'Google Places API', 'SEO'],
     href: 'https://atalogym.com',
     logo: 'atalo',
@@ -139,7 +139,7 @@ export const PROJECTS = [
   {
     title: 'Sydney Forks Self Storage',
     description:
-      'Designed and developed a custom site that increased online visibility and customer inquiries for a growing storage business — featuring Google reviews integration and local SEO.',
+      'A custom site for a growing storage business that\'s pulled in more inquiries since going live. Google reviews integrated and tuned for local SEO.',
     tags: ['React', 'Google Places API', 'SEO'],
     href: 'https://sydneyforksstorage.ca',
     logo: 'sydneyforks',

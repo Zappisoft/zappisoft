@@ -132,7 +132,7 @@ export default function CTA() {
           </picture>
           <h2 className={styles.headline}>Let&apos;s build something that performs.</h2>
           <p className={styles.description}>
-            Share a few details about your project and we&apos;ll follow up within 24 hours.
+            Tell us a bit about your project and we&apos;ll get back to you within 24 hours.
           </p>
 
           <a href={`mailto:${CONTACT_EMAIL}`} className={styles.email}>

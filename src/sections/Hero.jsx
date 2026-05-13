@@ -29,7 +29,7 @@ export default function Hero() {
           </h1>
 
           <p className={styles.subheadline}>
-            Custom websites, web apps, and mobile apps — built with precision
+            Custom websites, web apps, and mobile apps. Built with precision
             by a developer-led studio.
           </p>
 

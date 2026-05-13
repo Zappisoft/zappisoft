@@ -10,7 +10,7 @@ const jsonLd = {
   name: 'Zappisoft',
   url: 'https://zappisoft.com',
   description:
-    'Developer-led studio building custom websites, web applications, and scalable digital solutions with modern technology.',
+    'Developer-led studio building custom websites, web apps, and mobile apps. Senior developers, modern stack, no shortcuts.',
   email: 'contact@zappisoft.com',
   sameAs: ['https://www.instagram.com/zappisoft.inc/'],
   serviceType: [
@@ -30,9 +30,9 @@ export const viewport = {
 
 export const metadata = {
   metadataBase: new URL('https://zappisoft.com'),
-  title: 'Zappisoft — Software Built with Precision',
+  title: 'Zappisoft — Custom Software, Built Right.',
   description:
-    'Developer-led studio building custom websites, web applications, and scalable digital solutions with modern technology.',
+    'Developer-led studio building custom websites, web apps, and mobile apps. Senior developers, modern stack, no shortcuts.',
   alternates: {
     canonical: '/',
   },
@@ -42,16 +42,16 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: 'https://zappisoft.com',
-    title: 'Zappisoft — Software Built with Precision',
+    title: 'Zappisoft — Custom Software, Built Right.',
     description:
-      'Developer-led studio building custom websites, web applications, and scalable digital solutions.',
+      'Developer-led studio building custom websites, web apps, and mobile apps. Senior developers, modern stack, no shortcuts.',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zappisoft — Software Built with Precision',
+    title: 'Zappisoft — Custom Software, Built Right.',
     description:
-      'Developer-led studio building custom websites, web applications, and scalable digital solutions.',
+      'Developer-led studio building custom websites, web apps, and mobile apps. Senior developers, modern stack, no shortcuts.',
     images: ['https://zappisoft.com/og-image.png'],
   },
 };

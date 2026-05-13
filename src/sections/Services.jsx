@@ -12,7 +12,7 @@ export default function Services() {
       <Container>
         <SectionHeader
           label="What we do"
-          title="Software designed to perform."
+          title="What we build."
         />
         <div className={styles.grid}>
           {SERVICES.map(({ icon: Icon, title, description, tags }) => (
