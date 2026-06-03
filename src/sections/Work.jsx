@@ -13,11 +13,17 @@ import ataloJpg from '../assets/atalo-screenshot.jpg';
 import ataloWebp from '../assets/atalo-screenshot.webp';
 import sydneyJpg from '../assets/sydney-screenshot.jpg';
 import sydneyWebp from '../assets/sydney-screenshot.webp';
+import peptideDepotJpg from '../assets/peptide-depot-screenshot.jpg';
+import peptideDepotWebp from '../assets/peptide-depot-screenshot.webp';
 import styles from './Work.module.css';
 
 const SCREENSHOTS = {
   atalo: { jpg: ataloJpg.src || ataloJpg, webp: ataloWebp.src || ataloWebp },
   sydney: { jpg: sydneyJpg.src || sydneyJpg, webp: sydneyWebp.src || sydneyWebp },
+  'peptide-depot': {
+    jpg: peptideDepotJpg.src || peptideDepotJpg,
+    webp: peptideDepotWebp.src || peptideDepotWebp,
+  },
 };
 
 export default function Work() {

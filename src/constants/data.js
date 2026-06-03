@@ -128,6 +128,14 @@ export const PROCESS_STEPS = [
 
 export const PROJECTS = [
   {
+    title: 'Peptide Depot',
+    description:
+      'A full-stack Canadian e-commerce platform built from the ground up: multi-rail checkout (card with 3DS, crypto with on-chain verification, Interac e-Transfer), wholesale B2B and affiliate portals with commission tracking, an AI-driven blog/SEO pipeline, and an admin suite for orders, inventory, tax, and analytics. Type-safe end to end and deployed on AWS.',
+    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'AWS'],
+    href: 'https://www.thepeptidedepot.ca',
+    screenshot: 'peptide-depot',
+  },
+  {
     title: 'Atalo Gym',
     description:
       'A fast, mobile-first website that\'s been bringing in new gym memberships since launch. Integrated Google reviews and built for local SEO.',
