@@ -62,10 +62,12 @@ export default function Work() {
           ))}
         </div>
 
-        <span className={styles.link}>
-          View project
-          <ArrowUpRight size={14} />
-        </span>
+        {href && (
+          <span className={styles.link}>
+            View project
+            <ArrowUpRight size={14} />
+          </span>
+        )}
       </>
     );
 

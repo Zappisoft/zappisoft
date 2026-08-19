@@ -91,6 +91,7 @@ Before adding the entry:
 
 ### If it ever goes in without an `href`
 
-`Work.jsx` renders the "View project ↗" label unconditionally, so a hrefless entry
-ships a dead affordance. Guard that label on `href` before adding any project
-without a link.
+Safe as of 2026-08-19 — the "View project ↗" label is now guarded on `href` in
+`Work.jsx`, so a linkless entry simply omits it instead of shipping a dead
+affordance. The card still falls back to the generic `<Code>` placeholder icon
+without a registered screenshot, so that part of the checklist still applies.
