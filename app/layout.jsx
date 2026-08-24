@@ -1,4 +1,5 @@
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import '@/styles/fonts.css';
 import '@/styles/global.css';
 
@@ -97,6 +98,7 @@ export default function RootLayout({ children }) {
             </Script>
           </>
         ) : null}
+        <Analytics />
       </body>
     </html>
   );
