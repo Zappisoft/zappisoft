@@ -12,7 +12,7 @@ const jsonLd = {
   url: 'https://zappisoft.com',
   description:
     'Developer-led studio building custom websites, web apps, and mobile apps. Senior developers, modern stack, no shortcuts.',
-  email: 'contact@zappisoft.com',
+  email: 'hello@zappisoft.com',
   sameAs: ['https://www.instagram.com/zappisoft.inc/'],
   serviceType: [
     'Custom Websites',

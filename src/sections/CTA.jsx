@@ -8,7 +8,7 @@ import Button from '../components/ui/Button';
 import RevealCard from '../components/ui/RevealCard';
 import styles from './CTA.module.css';
 
-const CONTACT_EMAIL = 'contact@zappisoft.com';
+const CONTACT_EMAIL = 'hello@zappisoft.com';
 const FORMSPREE_URL = process.env.NEXT_PUBLIC_FORMSPREE_ID
   ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`
   : null;
