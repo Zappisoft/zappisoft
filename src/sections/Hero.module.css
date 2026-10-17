@@ -35,10 +35,10 @@
   height: 1100px;
   background: radial-gradient(
     circle at center,
-    rgba(45, 212, 191, 0.09) 0%,
-    rgba(45, 212, 191, 0.05) 20%,
-    rgba(45, 212, 191, 0.02) 40%,
-    rgba(45, 212, 191, 0.008) 60%,
+    rgba(0, 212, 180, 0.09) 0%,
+    rgba(0, 212, 180, 0.05) 20%,
+    rgba(0, 212, 180, 0.02) 40%,
+    rgba(0, 212, 180, 0.008) 60%,
     transparent 80%
   );
   border-radius: 50%;

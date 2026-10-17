@@ -18,7 +18,7 @@
 
 .itemHovered {
   background: #131313;
-  border-top-color: #00d4b4;
+  border-top-color: var(--color-accent);
   transform: translateY(-4px);
 }
 
@@ -75,7 +75,7 @@
   }
 
   .itemHovered {
-    border-left-color: #00d4b4;
+    border-left-color: var(--color-accent);
     border-top-color: transparent;
     transform: translateX(4px);
     box-shadow: -4px 0 12px rgba(0, 212, 180, 0.15);

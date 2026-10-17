@@ -26,7 +26,7 @@
 
 .badge:hover .icon {
   color: var(--color-accent);
-  filter: drop-shadow(0 0 8px rgba(45, 212, 191, 0.5));
+  filter: drop-shadow(0 0 8px rgba(0, 212, 180, 0.5));
 }
 
 .badge:hover {
