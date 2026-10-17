@@ -70,6 +70,13 @@ export default function RootLayout({ children }) {
         />
         <link
           rel="preload"
+          href="/fonts/space-grotesk-latin.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
           href="/fonts/jetbrains-mono-latin.woff2"
           as="font"
           type="font/woff2"

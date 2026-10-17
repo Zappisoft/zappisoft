@@ -90,7 +90,7 @@
 
 .headline {
   font-size: var(--text-6xl);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semibold);
   line-height: 1.1;
   letter-spacing: -0.035em;
   color: var(--color-text-primary);
